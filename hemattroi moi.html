@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hệ Mặt Trời</title>
+  <style>
+    body {
+      background-color: black; /* Màu nền của toàn bộ trang */
+      color: white; /* Màu chữ của toàn bộ trang */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 30px;
+      color: #FFD700;
+    }
+    p {
+      font-size: 15px;
+      margin-top: 10px;
+    }
+    #menu ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      font-family: Bevan;
+      font-size: 19px;
+    }
+    #menu p {
+    padding: 0% ; /* Khoảng cách trên và dưới */
+  width: 1px; /* Chiều rộng cố định */
+  margin: 20px auto; /* Căn giữa khối */
+  text-align: left; /* Văn bản căn lề trái */
+  font-family: Arial, sans-serif; /* Font mặc định */  
+    }
+    #menu a {
+       padding:10px 0;
+    }
+    #banner {
+      background-color: #05013b; /* Nền banner */
+      background-image: url("anhhay.jpg");
+      background-size: 100%;
+      height: 700px;
+      width: 98%;
+      display:flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      repeat:no-repeat;
+       position: Static;
+
+    }
+    #banner .box-left h2 {
+      font-size: 67px;
+      margin-top: 190px;
+      color: #FFFFFF;
+      font-weight: bold;
+      width:80%;
+      font-family: sans-serif;
+
+    }
+    #banner .box-left p {
+      color: #FFFFFF;
+      font-size: 23px;
+      margin-top: 60px;
+      letter-spacing: 2px;
+      width:70%;
+    }
+    #banner .box-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 50px;
+    }
+    #banner .box-right img {
+      margin: 0 10px;
+      animation: bounce 3s infinite linear;
+      border-radius: 10%;
+    }
+    @keyframes bounce {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .hemattroi {
+      background-color: white; /* Nền trắng cho khối chứa */
+      display: flex; /* Dùng flexbox để căn giữa */
+      justify-content: center; /* Căn giữa theo chiều ngang */
+      align-items: center; /* Căn giữa theo chiều dọc */
+      padding: 20px 0; /* Khoảng cách trên và dưới */
+    }
+    .hemattroi p{
+      font-size: 17px;
+      font-family: inherit;
+    }
+
+    .content-block {
+      background-color: #f9f9f9; /* Màu nền nhẹ cho khối */
+      color: black; /* Màu chữ đen */
+      padding: 20px 30px; /* Padding trong khối */
+      width: 80%; /* Độ rộng của khối */
+      max-width: 1000px; /* Đảm bảo khối không quá rộng */
+      border-radius: 10px; /* Bo góc cho khối */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ cho khối */
+      text-align: justify; /* Căn đều nội dung */
+    }
+    a {
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 23px;
+    }
+    a:hover {
+      color: #FFD700;
+      font-size: 23px;
+    }
+    .image-container {
+  display: flex; /* Sử dụng Flexbox để xếp các phần tử theo chiều ngang */
+  gap:0px;  /*Khoảng cách giữa các hình ảnh */
+  justify-content: center; /* Căn giữa các hình ảnh */
+  margin: 0; /* Xóa margin */
+  padding: 0; /* Xóa padding */
+  background-color: white; /* Thay đổi nền của phần này thành trắng */
+  width: 100%; /* Đảm bảo container có độ rộng 100% */
+  box-sizing: border-box; /* Đảm bảo rằng padding và border được tính trong chiều rộng */
+}
+
+.image-item {
+  padding: 0% ; /* Khoảng cách trên và dưới */
+  width: 390px; /* Chiều rộng cố định */
+  margin: 20px auto; /* Căn giữa khối */
+  text-align: left; /* Văn bản căn lề trái */
+  font-family: Arial, sans-serif; /* Font mặc định */
+}
+
+.image-item img {
+  width: 100%; /* Ảnh chiếm toàn chiều rộng của khối */
+  height: auto; /* Tỷ lệ ảnh tự động */
+  border-radius: 8px; /* Bo góc ảnh */
+  margin-bottom: 10px; /* Khoảng cách dưới ảnh */
+  padding: 0 0; /* Khoảng cách trên và dưới */
+
+}
+
+.image-item h2 {
+  font-size: 18px; /* Kích thước tiêu đề */
+  color: #000; /* Màu chữ đen */
+  font-weight: bold; /* Đậm chữ */
+  margin: 5px 0; /* Khoảng cách trên dưới */
+}
+
+.image-item p {
+  font-size: 16px; /* Kích thước mô tả */
+  color: #333; /* Màu chữ xám đậm */
+  line-height: 1.5; /* Cách dòng */
+  margin-bottom: 15px; /* Khoảng cách dưới đoạn mô tả */
+}
+.kobiet {
+  background-color: white; /* Nền trắng cho khối chứa */
+      display: flex; /* Dùng flexbox để căn giữa */
+      justify-content: left; /* Căn giữa theo chiều ngang */
+      align-items: left; /* Căn giữa theo chiều dọc */
+      padding: 0px 0; /* Khoảng cách trên và dưới */
+}
+.kobiet h2{
+  color:black;
+  margin:50px;
+  margin-top:20xp;
+  font-size: 50px;
+  padding: 10px 0; /* Khoảng cách trên và dưới */
+}
+.kobiet p{
+  color:black;
+  text-align: left;
+  font-size: 18px;
+  width:60%;
+  padding: 0px 0px; /* Khoảng cách trên và dưới */
+  font-family:Arial, sans-serif; 
+  line-height: 25px;
+  word-spacing: 5px;
+}
+ #gaga {
+      background-image: url("xc.jpg");
+      background-size: 100% ;
+      height: 600px;
+      width-max:100%;
+      display: flex;
+      justify-content: space-between;
+      background-repeat: no-repeat;
+    }
+.content-box p {
+      font-size: 18px;
+      margin-top: -20px;
+      color: #FFFFFF;
+      width:30%;
+      margin-left: 300px;
+      word-spacing: 3px;
+      margin-bottom: 30px;
+    }
+.content-box h2{
+  word-spacing: 1px;
+  font-size: 57px;
+  margin-top: 0px;
+  color: #FFFFFF;
+  font-weight: bold;
+  width:40%;
+  margin-left: 300px;
+  font-family: serif;
+  font-weight: bold;
+}
+.content-box h1 {
+      font-size: 16px;
+      color: #FFFFFF;
+      width:30%;
+      margin-left: 120px;
+      word-spacing: 3px;
+      margin-top: 180px;
+      font-family: monospace;
+    }
+ .content-box a{
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 23px;
+    }
+    a:hover {
+      color: #FFD700;
+      font-size: 23px;
+    }
+    
+    .deptrai {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 10vh;
+            text-align: center;
+            position: relative;
+        }
+
+        .deptrai h1 {
+            font-size: 25px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+            animation: glow 2s infinite alternate;
+        }
+
+        .logo {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            width: 110px;
+            height: auto;
+        }
+        .decorative-line {
+            margin: 20px 0;
+            width: 50%;
+            height: 2px;
+            background: linear-gradient(to right, #00eaff, transparent);
+
+        }
+        .floating-planets {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            gap: 30px;
+            opacity: 0.8;
+        }
+
+        .planet {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ffaf40, #ff6b01);
+            box-shadow: 0 0 20px #ff6b01;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        .planet:nth-child(2) {
+            background: radial-gradient(circle, #7bc6ff, #009fff);
+            box-shadow: 0 0 20px #009fff;
+            animation-duration: 7s;
+        }
+
+        .planet:nth-child(3) {
+            background: radial-gradient(circle, #aaffaa, #22ff22);
+            box-shadow: 0 0 20px #22ff22;
+            animation-duration: 6s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .deptrai1 {
+          argin: 0;
+            padding: 0;
+            background: linear-gradient(135deg,#222222, #000000,#222222);
+            font-family: 'Arial', sans-serif;
+            color:white;
+            overflow: hidden;
+        }
+    .tieptheo{
+      background-color: white; /* Nền trắng cho khối chứa */
+      display: flex; /* Dùng flexbox để căn giữa */
+      justify-content: left; /* Căn giữa theo chiều ngang */
+      align-items: left; /* Căn giữa theo chiều dọc */
+      padding: 30% 0; /* Khoảng cách trên và dưới */
+      color:black;
+    }
+    .tieptheo h1{
+      font-size: 16px;
+      color: black;
+      margin-left: 3px;;
+      word-spacing: 5px;
+      margin-top: -100%;
+      font-family: monospace;
+      width:100%;
+    }
+    .tieptheo h2{
+      font-size: 40px;
+      color: black;
+      margin-left: 120px;
+      margin-top: 1px;
+      font-family: monospace;
+      width:100%;
+    }
+.moii {
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    color: #333;
+    padding-left:-100%;
+    transform: translateX(-20px);
+}
+
+.card-container {
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    transform: translateX(-200px);
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 300%;
+    height: 250%;
+    transition: filter 0.3s ease;
+    cursor: pointer;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    transform: translateX(-20px);
+}
+
+.card a {
+    display: block;
+}
+
+.card-content {
+     padding: 30px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 15px 15px;
+}
+
+.card:hover .card-content {
+    opacity: 1;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-content p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.chao {
+  background-color: black;
+}
+
+  </style>
+</head>
+<body>
+  <div class="deptrai1">
+<div class="stars"></div>
+    <div class="deptrai">
+        <h1>Tổng quan về các hành tinh</h1>
+        <div class="decorative-line"></div>
+        <div class="floating-planets">
+            <div class="planet"></div>
+            <div class="planet"></div>
+            <div class="planet"></div>
+        </div>
+        <img src="cc.png" alt="Nhóm Universe Logo" class="logo">
+    </div>
+</div>
+</div>
+
+  <div id="banner">
+    <div class="box-left">
+      <h2><span>HỆ MẶT TRỜI VÀ ĐIỀU BẠN CHƯA BIẾT.</span></h2>
+      <p><strong>♦ Hệ mặt trời của chúng ta có một ngôi sao, tám hành tinh, năm hành tinh lùn được đặt tên chính thức , hàng trăm mặt trăng, hàng nghìn sao chổi và hơn một triệu tiểu hành tinh .</p>
+    </div>
+    <div class="box-right">
+      <img src="images(1)(1).png" alt="Hành tinh 1" />
+      <img src="images(1)(2).png" alt="Hành tinh 2" />
+      <img src="images(1)(3).png" alt="Hành tinh 3" />
+    </div>
+  </div>
+
+  <div class="hemattroi">
+    <div class="content-block">
+      <p>♠ Hệ mặt trời có tám hành tinh: Sao Thủy, Sao Kim, Trái Đất, Sao Hỏa, Sao Mộc, Sao Thổ, Sao Thiên Vương và Sao Hải Vương. Có năm hành tinh lùn được công nhận chính thức trong hệ mặt trời của chúng ta: Ceres, Sao Diêm Vương, Haumea, Makemake và Eris.</p>
+      <p><a href="https://science-nasa-gov.translate.goog/solar-system/planets/what-is-a-planet/?_x_tr_sl=en&_x_tr_tl=vi&_x_tr_hl=vi&_x_tr_pto=wa"><strong>Hành Tinh Là Gì? ➯</strong> </a></p>
+      </div></div>
+
+    <div class="kobiet">
+      <h2><span><strong>Các hành tinh bên trong</strong></span></p>
+      <p>&#10055; Bốn hành tinh đầu tiên tính từ Mặt trời là Sao Thủy, Sao Kim, Trái Đất và Sao Hỏa. Những hành tinh bên trong này cũng được gọi là hành tinh đất đá vì chúng có bề mặt rắn.</p>
+    </div>
+
+  <div class="image-container">
+  <div class="image-item">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Mercury_in_color_-_Prockter07_centered.jpg" alt="Hình Ảnh 1">
+    <div class="sao-thuy-content">
+    <h2>Sự thật về sao thủy</h2>
+    <p>Sao Thủy là hành tinh gần Mặt Trời nhất và là hành tinh nhỏ nhất trong hệ mặt trời của chúng ta.</p>
+    <a href="file:///D:/dgfdd.html#gallery">
+      <strong>Khám phá sao thủy ➯ </strong>
+    </div>
+  </div>
+  
+  <div class="image-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREkxV4UXmC-cv_T55HIk6W3sxLDHKo2G0rmw&s" alt="Hình Ảnh 2">
+    <h2>Sự thật về sao kim</h2>
+    <p>Sao Kim là hành tinh thứ hai tính từ Mặt Trời và là hành tinh lớn thứ sáu.</p>
+    <strong>
+    <p><a href="file:///D:/Sao%20kim.html#"><strong>Khám phá sao kim ➯</strong> </a></strong>
+  </div>
+  <div class="image-item">
+    <strong>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Earth_from_Space.jpg/220px-Earth_from_Space.jpg" alt="Hình Ảnh 3">
+    <h2>Sự thật về trái đất</h2>
+    <p>Trái Đất – hành tinh quê hương của chúng ta – là hành tinh thứ ba tính từ Mặt Trời và là hành tinh lớn thứ năm.</p>
+    <p><a href="file:///D:/trái%20đất.html"><strong>khám phá trái đất ➯</strong> </a></p>
+    </strong>
+  </div>
+
+  <div class="image-item">
+    <strong>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Mars_Valles_Marineris.jpeg/260px-Mars_Valles_Marineris.jpeg" alt="Hình Ảnh 4">
+    <h2>Sự thật về sao hỏa</h2>
+    <p>Sao Hỏa là hành tinh thứ tư tính từ Mặt Trời và là hành tinh lớn thứ bảy.</p>
+    <p><a href="file:///D:/sao%20hỏa.html"><strong>Khám phá sao hỏa ➯</strong> </a></p>
+  </strong>
+  </div>
+</div>
+<div class="kobiet">
+      <h2><span><strong>Các hành tinh bên ngoài</strong></span></p>
+      <p>&#10055; Các hành tinh khổng lồ trong hệ mặt trời bên ngoài không có bề mặt cứng. Thay vào đó, chúng có khí xoáy phía trên lõi. Sao Mộc và Sao Thổ là những hành tinh khí khổng lồ. Sao Thiên Vương và Sao Hải Vương là những hành tinh băng khổng lồ.</p>
+    </div>
+    <div class="image-container">
+  <div class="image-item">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg" alt="Hình Ảnh 1">
+    <div class="sao-thuy-content">
+    <h2>Sự thật về sao thiên vương</h2>
+    <p>Sao Thiên Vương là hành tinh thứ bảy tính từ Mặt Trời và là hành tinh lớn thứ ba trong hệ mặt trời của chúng ta.</p>
+    <a href="file:///D:/sao%20thiên%20vương.html">
+      <strong>Khám phá sao thiên vương ➯ </strong>
+    </div>
+  </div>
+  
+  <div class="image-item">
+    <img src="https://nld.mediacdn.vn/2018/8/31/jupapr3color-jd-1703040-1535711394700279988322.png" alt="Hình Ảnh 2">
+    <h2>Sự thật về sao mộc</h2>
+    <p>Sao Mộc là hành tinh thứ năm tính từ Mặt Trời và là hành tinh lớn nhất trong hệ mặt trời của chúng ta.</p>
+    <strong>
+    <p><a href="file:///D:/sao%20mộc.html"><strong>Khám phá sao mộc ➯</strong> </a></strong>
+  </div>
+  <div class="image-item">
+    <strong>
+    <img src="https://e.khoahoc.tv/photos/image/2018/12/30/vanh-dai-sao-tho-200.jpg" alt="Hình Ảnh 3">
+    <h2>Sự thật về sao thổ</h2> 
+    <p>Sao Thổ là hành tinh thứ sáu tính từ Mặt Trời, là hành tinh lớn thứ hai trong hệ mặt trời của chúng ta.</p>
+    <p><a href="file:///D:/sao%20thổ.html"><strong>khám phá sao thổ ➯</strong> </a></p>
+    </strong>
+  </div>
+
+  <div class="image-item">
+    <strong>
+    <img src="https://genk.mediacdn.vn/139269124445442048/2023/11/21/83025aafa40f4bfb94f71688a4a267fdf53618c5-17005423650832078456385-1700544273786-17005442746301205643987.jpg" alt="Hình Ảnh 4">
+    <h2>Sự thật về sao hải vương</h2>
+    <p>Sao Hải Vương là hành tinh thứ tám và xa nhất trong hệ mặt trời của chúng ta. Đây là hành tinh lớn thứ tư.</p>
+    <p><a href="D:\Phương\Tin cuối kỳ\test3.html"><strong>Khám phá sao hải vương ➯</strong> </a></p>
+  </strong>
+  </div>
+</div>
+<div class="kobiet">
+      <h2><span><strong>"Vệ tinh", ngôi sao lớn nhất và 1 số hành tinh lùn.</strong></span></p>
+      <p>&#10055; Mặt trăng là vệ tinh tự nhiên duy nhất của Trái Đất. Với độ sáng ở bầu trời chỉ sau Mặt Trời. Mặt trời là ngôi sao ở trung tâm Hệ Mặt Trời, chiếm khoảng 99,8% khối lượng của Hệ Mặt Trời.Các hành tinh lùn bao gồm Pluto, Ceres, Makemake, Haumea và Eris được ưa chuộng từ lâu. Ceres là hành tinh lùn duy nhất trong hệ mặt trời bên trong. Nó nằm trong vành đai tiểu hành tinh chính giữa Sao Hỏa và Sao Mộc. </p>
+    </div>
+    <div class="image-container">
+  <div class="image-item">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" alt="Hình Ảnh 1">
+    <div class="sao-thuy-content">
+    <h2>Sự thật về mặt trăng</h2>
+    <p>Trong Hệ Mặt trời, Mặt trăng là vệ tinh tự nhiên lớn thứ năm. Nếu xét về tỷ lệ kích thước so với hành tinh mà nó quay quanh thì Mặt trăng đạt tỷ lệ này cao nhất trong Hệ Mặt trời.</p>
+    <a href="file:///D:/MATTRANG.html">
+      <strong>Khám phá mặt trăng➯ </strong>
+    </div>
+  </div>
+  <div class="image-item">
+    <img src="https://genk.mediacdn.vn/139269124445442048/2023/3/13/1073px-thesunbytheatmosphericimagingassemblyofnasa27ssolardynamicsobservatory-20100819-16786737277851506111205-1678678672163-1678678672309177053557.jpg" alt="Hình Ảnh 2">
+    <h2>Sự thật về mặt trời</h2>
+    <p>Trái Đất và các thiên thể khác như các hành tinh, tiểu hành tinh, thiên thạch, sao chổi, và bụi quay quanh Mặt Trời.</p>
+    <strong>
+    <p><a href="file:///D:/Phương/Tin%20cuối%20kỳ/mặt%20trời.html"><strong>Khám phá mặt trời ➯</strong> </a></strong>
+  </div>
+  <div class="image-item">
+    <strong>
+    <img src="https://cdn.mos.cms.futurecdn.net/v7pxtha36GW3pqGkmCWSfS.jpg" alt="Hình Ảnh 4">
+    <h2>Sự thật về Makemake</h2>
+    <p>Makemake nhỏ hơn một chút so với sao Diêm Vương và là vật thể sáng thứ hai trong vành đai Kuiper, trong khi sao Diêm Vương là vật thể sáng nhất. </p>
+    <p><a href="file:///D:/Phương/Tin%20cuối%20kỳ/makemake.html"><strong>Khám phá Makemake ➯</strong> </a></p>
+  </strong>
+  </div>
+</div>
+<div class="image-container">
+  <div class="image-item">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/2003EL61art.jpg/220px-2003EL61art.jpg" alt="Hình Ảnh 1">
+    <h2>Sự thật về Haumea</h2>
+    <p>Haumea được một nhóm khám phá đặt biệt danh là Santa. Nó có hình bầu dục và là một trong những vật thể lớn quay nhanh nhất trong hệ mặt trời của chúng ta.</p>
+    <a href="file:///D:/Phương/Tin%20cuối%20kỳ/Haumea.html">
+      <strong>Khám phá Haumea ➯ </strong>    
+  </div>
+  <div class="image-item">
+    <strong>
+    <img src="https://translate.google.com/website?sl=en&tl=vi&hl=vi&client=wa&u=https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/09/e/ErisArtistConcept1200w.jpg?w%3D2048%26format%3Dwebp%26fit%3Dclip%26crop%3Dfaces%252Cfocalpoint" alt="Hình Ảnh 4">
+    <h2>Sự thật về Eris</h2>
+    <p>Việc phát hiện ra Eris đã góp phần gây ra cuộc tranh luận trong cộng đồng khoa học dẫn đến quyết định làm rõ định nghĩa về hành tinh.</p>
+    <p><a href="D:\Phương\Tin cuối kỳ\test3.html"><strong>Khám phá sao Eris ➯</strong> </a></p>
+  </strong>
+  </div>
+  <div class="image-item">
+    <strong>
+    <img src="https://e.khoahoc.tv/photos/image/2016/04/12/hanh-tinh-lun-2.jpg" alt="Hình Ảnh 4">
+    <h2>Sự thật về Sự thật về Ceres</h2>
+    <p>Hành tinh lùn Ceres là vật thể lớn nhất trong vành đai tiểu hành tinh giữa sao Hỏa và sao Mộc, và là hành tinh lùn duy nhất trong hệ mặt trời bên trong.</p>
+    <p><a href="D:\Phương\Tin cuối kỳ\test3.html"><strong>Khám phá Ceres ➯</strong> </a></p>
+  </strong>
+  </div>
+</div>
+  <div id="gaga">
+    <div class="content-box">
+      <h1> ❤ Câu chuyện nổi bật </h1>
+      <h2><span>MỘT SỐ THÚ VỊ VỀ HỆ MẶT TRỜI.</span></h2>
+      <p>&#10055; Ngoài những thông số vật lý rõ ràng mà người yêu thiên văn có thể tìm thấy ở nhiều tài liệu, hệ mặt trời với các hành tinh, vệ tinh... của nó còn có nhiều điểm thú vị mà có thể nhiều người chưa biết.</p>
+      <p><a href="https://baophutho.vn/nhung-dieu-thu-vi-ve-he-mat-troi-30789.htm"><strong>Đọc câu chuyện ➯</strong> </a></p>
+    </div>
+  </div>
+  <button onclick="scrollToTop()" id="backToTop" style="display: none; position: fixed; bottom: 20px; right: 20px; background-color: #FFD700; color: black; border: none; padding: 10px; cursor: pointer; border-radius: 5px;">▲</button>
+
+<script>
+  const backToTop = document.getElementById('backToTop');
+  window.onscroll = function() {
+    backToTop.style.display = window.scrollY > 200 ? 'block' : 'none';
+  };
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+  <div class="tieptheo">
+    <div class="tieptheo1">
+      <h1> ♣Tiếp tục khám phá </h1>
+      <h2>Khám phá thêm</h2>
+
+</div>
+<div class="moii">
+<div class="card-container">
+        
+        <div class="card">
+            <a href="https://science-nasa-gov.translate.goog/solar-system/oort-cloud/?_x_tr_sl=en&_x_tr_tl=vi&_x_tr_hl=vi&_x_tr_pto=wa" target="_blank">
+                <img src="https://translate.google.com/website?sl=en&tl=vi&hl=vi&client=wa&u=https://images-assets.nasa.gov/image/PIA23165/PIA23165~large.jpg?w%3D1920%26h%3D1080%26fit%3Dclip%26crop%3Dfaces%252Cfocalpoint" alt="Sample Image">
+            </a>
+            <div class="card-content">
+                <h3>Đám mây Oort</h3>
+                
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="https://science-nasa-gov.translate.goog/exoplanets/?_x_tr_sl=en&_x_tr_tl=vi&_x_tr_hl=vi&_x_tr_pto=wa" target="_blank">
+                <img src="https://science-nasa-gov.translate.goog/wp-content/uploads/2023/06/lp79118d-beautyshot-jpg.webp?w=1536&format=webp&_x_tr_sl=en&_x_tr_tl=vi&_x_tr_hl=vi&_x_tr_pto=wa" alt="Sample Image">
+            </a>
+            <div class="card-content">
+                <h3>Các hành tinh ngoài hệ mặt trời</h3>
+                
+            </div>
+        </div>
+    </div>
+          </div>
+          <div class="chao">
+            </div>
+  </body>
+</html>
